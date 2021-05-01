@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Emoji recognition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+
+   <link rel="stylesheet" href="style.css">
+   <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+   
+  </head>
+  <body style="background-image: url('background.jpg');">
+      <center>
+      <h1 class = "btn btn-default btn-block" style="font-size: 25px;"><b> Emotion Recognition </b></h1>
+      <h2 class = "btn btn-default btn-block" style="font-size: 20px;"> Model is trained to Identify the following Emotions </h2>
+      <br><br>
+      <kbd style="font-size: 20px;"><label> Happy </label> </kbd>
+     <hr>
+      <kbd style="font-size: 20px;"><label> Angry</label></kbd>
+      <hr>
+      <kbd style="font-size: 20px;"><label> Sad </label> </kbd>
+      <hr>
+      <kbd style="font-size: 20px;"><label> Crying </label></kbd>
+        <hr> 
+      <label class = "btn btn-default btn-block">Webcam View - </label>
+
+      <br><br>
+      <div id="camera"></div>
+      <br><br>
+      <div id="result"></div>
+        <br><br>
+
+        
+      <button class="btn btn-danger" id="takeSnap" onclick="takeSnap()"> Click Picture </button>
+      <br><br>
+      <button class="btn btn-danger" id="Identify" onclick="check()"> Identify Emotion </button>
+      <br><br> 
+      <p class = "btn btn-default btn-block" style="font-size: 20px;">Emotion : <span id="result_emotion"> </p>
+      <p class = "btn btn-default btn-block" style="font-size: 20px;">Accuracy : <span id="result_accuracy">  </p>
+    </center>
+      </body>
+      <script src="main.js"></script>
+</html>
